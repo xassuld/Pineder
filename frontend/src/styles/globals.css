@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your organized structure - preserved */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@900&display=swap");
+
+@custom-variant dark (&:is(.dark *));
+
+/* Custom extragered font class */
+.extragered-text {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+/* Custom stretched font class for wide, low-height text */
+.stretched-text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: scaleX(1.8) scaleY(0.8);
+  transform-origin: center;
+  letter-spacing: 10mm;
+  font-feature-settings: "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom tightest letter spacing for monolithic effect */
+.tracking-tightest {
+  letter-spacing: -0.25em;
+}
+
+/* ACUMIN-inspired minimal abstract font class */
+.acumin-style {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-feature-settings: "liga" 1, "kern" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: scaleX(1.1) scaleY(0.95);
+  transform-origin: center;
+}
+
+/* Light Theme (Default) */
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: #202a44;
+  --card: #ffffff;
+  --card-foreground: #202a44;
+  --popover: #ffffff;
+  --popover-foreground: #202a44;
+  --primary: #202a44;
+  --primary-foreground: #ffffff;
+  --secondary: #f2f4f8;
+  --secondary-foreground: #202a44;
+  --muted: #f2f4f8;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #202a44;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(32, 42, 68, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #202a44;
+  --chart-1: var(--pico-primary);
+  --chart-2: var(--pico-secondary);
+  --chart-3: var(--pico-accent);
+  --chart-4: var(--pico-primary);
+  --chart-5: var(--pico-secondary);
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #202a44;
+  --sidebar-primary: #202a44;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f2f4f8;
+  --sidebar-accent-foreground: #202a44;
+  --sidebar-border: #e9ebef;
+  --sidebar-ring: #202a44;
+
+  /* Custom Bloom colors - Theme 1 (Original) */
+  --bloom-primary: #9dc3c2;
+  --bloom-secondary: #77a6b6;
+  --bloom-accent: #4d7298;
+  --bloom-dark: #202a44;
+  --bloom-light: #f2f4f8;
+}
+
+/* Dark Theme */
+.dark {
+  --background: #181c14 !important;
+  --foreground: #ffffff !important;
+  --card: #181c14 !important;
+  --card-foreground: #ffffff !important;
+  --popover: #181c14 !important;
+  --popover-foreground: #ffffff !important;
+  --primary: #ffffff !important;
+  --primary-foreground: #181c14 !important;
+  --secondary: #181c14 !important;
+  --secondary-foreground: #ffffff !important;
+  --muted: #181c14 !important;
+  --muted-foreground: #a0a0a0 !important;
+  --accent: #181c14 !important;
+  --accent-foreground: #ffffff !important;
+  --destructive: #d4183d !important;
+  --destructive-foreground: #ffffff !important;
+  --border: rgba(255, 255, 255, 0.1) !important;
+  --input: #181c14 !important;
+  --input-background: #181c14 !important;
+  --switch-background: #181c14 !important;
+  --ring: #ffffff !important;
+  --chart-1: var(--pico-primary) !important;
+  --chart-2: var(--pico-secondary) !important;
+  --chart-3: var(--pico-accent) !important;
+  --chart-4: var(--pico-primary) !important;
+  --chart-5: var(--pico-secondary) !important;
+  --sidebar: #181c14 !important;
+  --sidebar-foreground: #ffffff !important;
+  --sidebar-primary: #ffffff !important;
+  --sidebar-primary-foreground: #181c14 !important;
+  --sidebar-accent: #181c14 !important;
+  --sidebar-accent-foreground: #ffffff !important;
+  --sidebar-border: rgba(255, 255, 255, 0.1) !important;
+  --sidebar-ring: #ffffff !important;
+}
+
+/* Additional specificity for dark theme */
+html.dark {
+  --background: #222222 !important;
+  --foreground: #ffffff !important;
+  --card: #222222 !important;
+  --card-foreground: #ffffff !important;
+}
+
+body.dark {
+  --background: #222222 !important;
+  --foreground: #ffffff !important;
+  --card: #222222 !important;
+  --card-foreground: #ffffff !important;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom Pico color utilities */
+  --color-pico-primary: var(--pico-primary);
+  --color-pico-secondary: var(--pico-secondary);
+  --color-pico-accent: var(--pico-accent);
+  --color-pico-dark: var(--pico-dark);
+  --color-pico-light: var(--pico-light);
+}
+
+/* Teammate's additional CSS layers - integrated with your structure */
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glow-hover {
+    @apply transition-all duration-300;
+  }
+
+  .glow-hover:hover {
+    @apply shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

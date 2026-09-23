@@ -1,0 +1,537 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@900&display=swap");
+
+@custom-variant dark (&:is(.dark *));
+
+/* Remove all borders from dropdown components */
+[data-radix-dropdown-menu-content] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+[data-radix-dropdown-menu-item] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+[data-radix-dropdown-menu-item]:hover {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+[data-radix-dropdown-menu-item]:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Additional aggressive border removal for all dropdown states */
+[data-radix-dropdown-menu-content] *,
+[data-radix-dropdown-menu-item] * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any default focus rings or borders */
+[data-radix-dropdown-menu-content]:focus-within,
+[data-radix-dropdown-menu-item]:focus-within {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Target the actual button elements inside dropdown items */
+[data-radix-dropdown-menu-item] button,
+[data-radix-dropdown-menu-item] a {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any transition borders */
+[data-radix-dropdown-menu-item] *:hover,
+[data-radix-dropdown-menu-item] *:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Prevent any border animations or transitions */
+[data-radix-dropdown-menu-content],
+[data-radix-dropdown-menu-item],
+[data-radix-dropdown-menu-content] *,
+[data-radix-dropdown-menu-item] * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Target any pseudo-elements that might have borders */
+[data-radix-dropdown-menu-content]::before,
+[data-radix-dropdown-menu-content]::after,
+[data-radix-dropdown-menu-item]::before,
+[data-radix-dropdown-menu-item]::after {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  content: none !important;
+}
+
+/* Remove any default browser focus styles */
+[data-radix-dropdown-menu-content]:focus,
+[data-radix-dropdown-menu-item]:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure no borders on any interactive state */
+[data-radix-dropdown-menu-item][data-state="open"],
+[data-radix-dropdown-menu-item][data-state="closed"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Target shadcn/ui specific classes */
+.dropdown-menu-content,
+.dropdown-menu-item,
+[class*="dropdown-menu"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any Tailwind border utilities that might be applied */
+.border,
+.border-0,
+.border-t,
+.border-b,
+.border-l,
+.border-r,
+.border-x,
+.border-y {
+  border: none !important;
+}
+
+/* Target any focus-visible states */
+[data-radix-dropdown-menu-item]:focus-visible,
+[data-radix-dropdown-menu-content]:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any ring utilities */
+.ring,
+.ring-0,
+.ring-1,
+.ring-2,
+.ring-4,
+.ring-8 {
+  box-shadow: none !important;
+}
+
+.extragered-text {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.stretched-text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: scaleX(1.8) scaleY(0.8);
+  transform-origin: center;
+  letter-spacing: 10mm;
+  font-feature-settings: "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tracking-tightest {
+  letter-spacing: -0.25em;
+}
+
+/* ACUMIN-inspired minimal abstract font class */
+.acumin-style {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-feature-settings: "liga" 1, "kern" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: scaleX(1.1) scaleY(0.95);
+  transform-origin: center;
+}
+
+/* Light Theme (Default) */
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: #202a44;
+  --card: #ffffff;
+  --card-foreground: #202a44;
+  --popover: #ffffff;
+  --popover-foreground: #202a44;
+  --primary: #202a44;
+  --primary-foreground: #ffffff;
+  --secondary: #f2f4f8;
+  --secondary-foreground: #202a44;
+  --muted: #f2f4f8;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #202a44;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(32, 42, 68, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #202a44;
+  --chart-1: var(--pico-primary);
+  --chart-2: var(--pico-secondary);
+  --chart-3: var(--pico-accent);
+  --chart-4: var(--pico-primary);
+  --chart-5: var(--pico-secondary);
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #202a44;
+  --sidebar-primary: #202a44;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f2f4f8;
+  --sidebar-accent-foreground: #202a44;
+  --sidebar-border: #e9ebef;
+  --sidebar-ring: #202a44;
+
+  /* Custom Bloom colors - Theme 1 (Original) */
+  --bloom-primary: #9dc3c2;
+  --bloom-secondary: #77a6b6;
+  --bloom-accent: #4d7298;
+  --bloom-dark: #202a44;
+  --bloom-light: #f2f4f8;
+}
+
+/* Dark Theme */
+.dark {
+  --background: #0f0e0e !important;
+  --foreground: #ffffff !important;
+  --card: #0f0e0e !important;
+  --card-foreground: #ffffff !important;
+  --popover: #0f0e0e !important;
+  --popover-foreground: #ffffff !important;
+  --primary: #ffffff !important;
+  --primary-foreground: #0f0e0e !important;
+  --secondary: #0f0e0e !important;
+  --secondary-foreground: #ffffff !important;
+  --muted: #0f0e0e !important;
+  --muted-foreground: #a0a0a0 !important;
+  --accent: #0f0e0e !important;
+  --accent-foreground: #ffffff !important;
+  --destructive: #d4183d !important;
+  --destructive-foreground: #ffffff !important;
+  --border: rgba(255, 255, 255, 0.1) !important;
+  --input: #0f0e0e !important;
+  --input-background: #0f0e0e !important;
+  --switch-background: #0f0e0e !important;
+  --ring: #ffffff !important;
+  --chart-1: var(--pico-primary) !important;
+  --chart-2: var(--pico-secondary) !important;
+  --chart-3: var(--pico-accent) !important;
+  --chart-4: var(--pico-primary) !important;
+  --chart-5: var(--pico-secondary) !important;
+  --sidebar: #0f0e0e !important;
+  --sidebar-foreground: #ffffff !important;
+  --sidebar-primary: #ffffff !important;
+  --sidebar-primary-foreground: #0f0e0e !important;
+  --sidebar-accent: #0f0e0e !important;
+  --sidebar-accent-foreground: #ffffff !important;
+  --sidebar-border: rgba(255, 255, 255, 0.1) !important;
+  --sidebar-ring: #ffffff !important;
+}
+
+/* Additional specificity for dark theme */
+html.dark {
+  --background: #0f0e0e !important;
+  --foreground: #ffffff !important;
+  --card: #0f0e0e !important;
+  --card-foreground: #ffffff !important;
+}
+
+body.dark {
+  --background: #0f0e0e !important;
+  --foreground: #ffffff !important;
+  --card: #0f0e0e !important;
+  --card-foreground: #ffffff !important;
+}
+
+/* Theme 1: Original (Default) */
+.theme-1 {
+  --pico-primary: #9dc3c2;
+  --pico-secondary: #77a6b6;
+  --pico-accent: #4d7298;
+  --pico-primary-rgb: 157, 195, 194;
+  --pico-secondary-rgb: 119, 166, 182;
+  --pico-accent-rgb: 77, 114, 152;
+}
+
+/* Theme 2: Green & Pink */
+.theme-2 {
+  --pico-primary: #db6c79;
+  --pico-secondary: #e05263;
+  --pico-accent: #ce4760;
+  --pico-primary-rgb: 219, 108, 121;
+  --pico-secondary-rgb: 224, 82, 99;
+  --pico-accent-rgb: 206, 71, 96;
+}
+
+/* Theme 3: Fresh Greens */
+.theme-3 {
+  --pico-primary: #72bda3;
+  --pico-secondary: #5e8c61;
+  --pico-accent: #4e6151;
+  --pico-primary-rgb: 114, 189, 163;
+  --pico-secondary-rgb: 94, 140, 97;
+  --pico-accent-rgb: 78, 97, 81;
+}
+
+/* Theme 4: Forest Greens */
+.theme-4 {
+  --pico-primary: #119822;
+  --pico-secondary: #2bc016;
+  --pico-accent: #27a700;
+  --pico-primary-rgb: 17, 152, 34;
+  --pico-secondary-rgb: 43, 192, 22;
+  --pico-accent-rgb: 39, 167, 0;
+}
+
+/* Theme 5: Ocean Blues */
+.theme-5 {
+  --pico-primary: #bfd7ea;
+  --pico-secondary: #91aec1;
+  --pico-accent: #508ca4;
+  --pico-primary-rgb: 191, 215, 234;
+  --pico-secondary-rgb: 145, 174, 193;
+  --pico-accent-rgb: 80, 140, 164;
+}
+
+/* Theme 6: Vibrant Mix */
+.theme-6 {
+  --pico-primary: #ff87ab;
+  --pico-secondary: #f191ac;
+  --pico-accent: #fcc8c2;
+  --pico-primary-rgb: 255, 135, 171;
+  --pico-secondary-rgb: 241, 145, 172;
+  --pico-accent-rgb: 252, 200, 194;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom Pico color utilities */
+  --color-pico-primary: var(--pico-primary);
+  --color-pico-secondary: var(--pico-secondary);
+  --color-pico-accent: var(--pico-accent);
+  --color-pico-dark: var(--pico-dark);
+  --color-pico-light: var(--pico-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Custom utilities for glassmorphism */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass-light {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .no-border {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hero background gradients */
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      var(--background) 0%,
+      var(--muted) 100%
+    );
+  }
+
+  .dark .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      var(--background) 0%,
+      var(--secondary) 50%,
+      var(--muted) 100%
+    );
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glow-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 20px rgba(var(--bloom-primary-rgb), 0.3);
+  }
+
+  .glow-primary:hover {
+    box-shadow: 0 0 20px rgba(var(--bloom-primary-rgb), 0.3);
+  }
+
+  .glow-secondary:hover {
+    box-shadow: 0 0 20px rgba(var(--bloom-secondary-rgb), 0.3);
+  }
+
+  .glow-accent:hover {
+    box-shadow: 0 0 20px rgba(var(--bloom-accent-rgb), 0.3);
+  }
+}
