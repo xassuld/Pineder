@@ -227,7 +227,7 @@ export default function HomePage() {
           name="description"
           content="Connect with mentors and grow your skills"
         />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
       </Head>
 
       {/* Recommended Mentors Section */}

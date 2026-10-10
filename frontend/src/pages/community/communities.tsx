@@ -143,7 +143,7 @@ export default function CommunityCommunities() {
           content="Join learning communities, connect with peers, and grow together on Pineder."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
       </Head>
 
       {/* Simple Minimal Hero Section */}
