@@ -225,7 +225,30 @@ export default function HomePage() {
         <title>Pineder - Mentorship Platform</title>
         <meta
           name="description"
-          content="Connect with mentors and grow your skills"
+          content="Connect with experienced mentors, find guidance, and grow your skills with Pineder."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mentorpineder.vercel.app/" />
+        <meta property="og:title" content="Pineder - Find guidance. Grow together." />
+        <meta
+          property="og:description"
+          content="Connect with experienced mentors, find guidance, and grow your skills with Pineder."
+        />
+        <meta
+          property="og:image"
+          content="https://mentorpineder.vercel.app/og-image.png?v=1"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pineder - Find guidance. Grow together." />
+        <meta
+          name="twitter:description"
+          content="Connect with experienced mentors, find guidance, and grow your skills with Pineder."
+        />
+        <meta
+          name="twitter:image"
+          content="https://mentorpineder.vercel.app/og-image.png?v=1"
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
       </Head>

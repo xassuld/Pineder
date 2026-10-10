@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f0fdf4"/>
+  <circle cx="1020" cy="110" r="260" fill="#dcfce7"/>
+  <circle cx="90" cy="610" r="250" fill="#dcfce7"/>
+  <rect x="92" y="105" width="1016" height="420" rx="36" fill="#ffffff"/>
+  <rect x="145" y="164" width="88" height="88" rx="22" fill="#15803d"/>
+  <path d="M209 179c-31 0-53 14-53 39 0 14 11 25 25 25 28 0 37-33 28-64Z" fill="#f0fdf4"/>
+  <path d="M151 249c13-22 28-36 51-51" fill="none" stroke="#15803d" stroke-linecap="round" stroke-width="6"/>
+  <path d="M173 227c-2-9-7-14-16-18m33 3c2-9 7-14 14-18" fill="none" stroke="#15803d" stroke-linecap="round" stroke-width="4"/>
+  <text x="258" y="225" fill="#14532d" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">Pineder</text>
+  <text x="145" y="345" fill="#14532d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">Find guidance.</text>
+  <text x="145" y="427" fill="#14532d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">Grow together.</text>
+  <text x="149" y="477" fill="#3f6212" font-family="Arial, Helvetica, sans-serif" font-size="27">Connect with mentors and take your next step.</text>
+  <path d="M965 336c-68 0-116 31-116 86 0 31 24 55 55 55 62 0 81-72 61-141Z" fill="#22c55e"/>
+  <path d="M838 492c29-48 62-79 112-112" fill="none" stroke="#166534" stroke-linecap="round" stroke-width="9"/>
+  <path d="M887 444c-4-20-16-31-35-39m73 8c4-20 15-31 31-40" fill="none" stroke="#166534" stroke-linecap="round" stroke-width="7"/>
+</svg>
