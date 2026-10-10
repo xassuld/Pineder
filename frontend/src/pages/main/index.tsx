@@ -20,7 +20,7 @@ export default function Home() {
           name="description"
           content="Connect with mentors and grow your skills"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
 
       <Teachers />

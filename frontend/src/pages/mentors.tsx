@@ -193,7 +193,7 @@ const MentorsPage = () => {
           content="Find your perfect mentor on Pineder - Connect with experienced professionals to accelerate your growth."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
 
       <div

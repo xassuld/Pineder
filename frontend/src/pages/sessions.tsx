@@ -439,7 +439,7 @@ export default function SessionsPage() {
           content="Track your learning sessions, view upcoming appointments, and review completed sessions with mentors."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
 
       <div className="px-4 py-2 mx-auto max-w-7xl sm:px-6 lg:px-8">

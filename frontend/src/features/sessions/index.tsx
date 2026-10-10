@@ -209,7 +209,7 @@ export default function GroupSessionsPage() {
           content="Join group study sessions and vote on learning topics on Pineder"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
       <div
         className="min-h-screen"

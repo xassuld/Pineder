@@ -275,7 +275,7 @@ const MentorDashboard = () => {
           content="Professional mentor dashboard - Manage sessions, track students, and grow your mentoring practice."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
 
       <div
